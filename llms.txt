@@ -1,0 +1,34 @@
+# 免费API雷达 — 免费 AI API / Token 目录（纯文本版，供 AI 引用）
+定位：中文、实测过的免费 AI API 目录。每条含厂商、额度、绑卡、门槛、有效期、官方链接。最近核实：2026-11-12。
+
+## 已实测可用
+- Google Gemini | 模型：gemini-3.5-flash（实测通过） | 额度：Free tier：按模型限速（AI Studio 可查各模型限额） | 绑卡：不需要 | 门槛：Google 账号即可，无需绑卡 | 有效期：无到期 | 官方：https://aistudio.google.com/apikey
+- EXAONE | 模型：k-exaone_v2.5 | 额度：Beta 期免费：每日 1,000,000 tokens | 绑卡：不需要 | 门槛：无需绑卡 | 有效期：Key 2026-12-09 到期 | 官方：https://docs.exaone.ai
+- LLM7.io | 模型：gpt-oss:20b / codestral-latest 等 | 额度：Free：每日 100,000 tokens（仅限 Turbo 模型）；约 60 RPM | 绑卡：不需要 | 门槛：邮箱/Google 注册，无需绑卡 | 有效期：Token 2026-12-09 到期 | 官方：https://dash.llm7.io/#/api-keys
+- Cohere | 模型：command-a-03-2025 | 额度：Trial：每月 1,000 次调用；Chat 20 RPM；不可商用 | 绑卡：不需要 | 门槛：无需绑卡 | 有效期：无到期 | 官方：https://dashboard.cohere.com
+- OpenRouter | 模型：多个 :free 模型（含 ERNIE-5.5-Flash-Preview:free） | 额度：:free 模型免费（共享池限速）；key 无到期 | 绑卡：不需要 | 门槛：无需绑卡 | 有效期：无到期 | 官方：https://openrouter.ai/settings/keys
+- Rime | 模型：coda v2（TTS） | 额度：Free：每月 $50 额度，自动续，不用不滚存 | 绑卡：不需要 | 门槛：无需绑卡；限评估/开发用途 | 有效期：每月刷新 | 官方：https://app.rime.ai
+
+## 其他目录条目（含无免费额度/未领取的如实标注）
+- OpenCode Zen | 状态：Key 已领·外部受限 | 额度：有限时免费模型，但免费聊天模型仅限 OpenCode 内部使用 | 门槛：Key 已领；外部客户端调用受限（403） | 官方：https://opencode.ai/console
+- Hugging Face | 状态：无免费额度 | 额度：免费账号无可用推理额度（实测 402） | 门槛：需预付费额度或 PRO 订阅才能调推理 | 官方：https://huggingface.co/settings/tokens
+- SambaNova | 状态：无免费额度 | 额度：无免费额度：余额 0，调用前必须先绑付款方式（实测 402） | 门槛：必须先加付款方式 | 官方：https://cloud.sambanova.ai
+- Chutes.ai | 状态：无免费额度 | 额度：无免费层（官方 FAQ 明示）：余额 $0，调用需先充值 | 门槛：需充值后调用 | 官方：https://chutes.ai
+- Groq | 状态：未领取 | 额度：免费层 30 RPM、14,400 RPD（未领到） | 门槛：注册被 Groq 风控拦截 | 官方：https://console.groq.com/keys
+- Cerebras | 状态：未领取 | 额度：免费层需激活后生效（控制台 Limits 页有各模型限额） | 门槛：创建 key 前强制先绑支付卡才给激活 | 官方：https://cloud.cerebras.ai
+- Mistral AI | 状态：未领取 | 额度：Free 计划含名义额度，但不可用来建 key | 门槛：须升级付费并绑支付方式才能建 key | 官方：https://console.mistral.ai/api-keys
+- Kilo Code | 状态：未领取 | 额度：免费层（未确认） | 门槛：OAuth 回调报 IP_MISMATCH，登录被拒 | 官方：https://app.kilo.ai
+- Ollama Cloud | 状态：未领取 | 额度：免费层（未确认） | 门槛：注册最后一步强制手机短信验证 | 官方：https://ollama.com/settings/keys
+- xAI (Grok API) | 状态：未领取 | 额度：无免费层：建 Grok API key 前必须先加付款方式 | 门槛：必须先绑卡（预付费） | 官方：https://console.x.ai
+
+## 雷达候选（官方核实，未实测）
+- LiveKit | 每月送 $2.50 模型推理额度（≈¥17/月） | 条件：无需绑卡；需开发接入 | 有效期：每月刷新 | 官方：https://livekit.com/pricing
+- ERNIE（OpenRouter） | ERNIE-5.5-Flash-Preview 限免：共享每日 50 次、每分钟 20 次 | 条件：仅 OpenRouter 提供；过期自动清零 | 有效期：到 2026-12-31 | 官方：https://openrouter.ai/baidu/ernie-5.5-flash-preview:free
+- 超算互联网 1 亿 Token | 双十一活动：新用户领 1 亿 Token（≈¥60） | 条件：需实名、客户端领取、每日限量 | 有效期：到 2026-12-31 | 官方：https://www.scnet.cn/home/subject/double11/index.html
+- 面壁 MiniCPM-OCR | MiniCPM-OCR 免费 API（图片及 PDF 文档解析） | 条件：需手机号验证建 API Key | 有效期：未标截止日 | 官方：https://github.com/OpenBMB/MiniCPM-OCR/blob/main/README_zh.md#api
+- AStudio（讯飞）每日 | 体验版每天登录领 100 积分 | 条件：需手机号登录、客户端签到、仅电脑端 | 有效期：每天可领 | 官方：https://agent.xfyun.cn/studio-guide/pricing
+- ACE Music | 每天 20 积分，最多生成 10 首歌 | 条件：限产品内使用；限非商用 | 有效期：按日领取 | 官方：https://acemusic.ai/pricing/
+- MiniMax Code H3 Image | 限时免费生成 10 张 H3 Image 图片 | 条件：限客户端内使用，仅生图 | 有效期：限时 | 官方：https://agent.minimax.cn/
+- AStudio（讯飞）新用户 | 新用户下载登录领 1000 积分 | 条件：限新用户；需手机号登录、仅电脑端 | 有效期：领取后 3 个月 | 官方：https://agent.xfyun.cn/studio-guide/pricing
+
+赞助：创始赞助位置顶 30 天，明确标注「赞助」，联系 Telegram @hiufanai_news。

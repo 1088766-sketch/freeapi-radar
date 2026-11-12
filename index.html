@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>免费API雷达 — 实测过的免费 AI API 目录</title>
+<meta name="description" content="中文免费 AI API / Token 目录：每条标额度、到期、要不要绑卡、领取门槛与实测状态，数据来自厂商官方页面核实与真实调用实测，每日更新。">
+<style>
+body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;margin:0;background:#f6f7f9;color:#1c1e21}
+header{background:#101828;color:#fff;padding:28px 16px}
+.wrap{max-width:980px;margin:0 auto;padding:0 16px}
+header h1{margin:0 0 6px;font-size:28px}
+header p{margin:0;opacity:.85}
+.stats{display:flex;gap:12px;flex-wrap:wrap;margin:18px 0}
+.stat{background:#fff;border:1px solid #e3e6ea;border-radius:10px;padding:12px 16px;min-width:130px}
+.stat b{font-size:22px;display:block}
+.sponsor{border:2px dashed #b98a00;background:#fff8e1;border-radius:10px;padding:14px 16px;margin:14px 0}
+input#q{width:100%;padding:10px 12px;border:1px solid #c9ced6;border-radius:8px;font-size:15px;margin:10px 0}
+.filters button{margin:0 6px 10px 0;padding:6px 12px;border:1px solid #c9ced6;background:#fff;border-radius:999px;cursor:pointer}
+.filters button.on{background:#101828;color:#fff}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:14px}
+.card{background:#fff;border:1px solid #e3e6ea;border-radius:10px;padding:14px 16px}
+.card h3{margin:0 0 8px;font-size:17px}
+.badge{color:#fff;font-size:12px;padding:2px 8px;border-radius:999px;vertical-align:middle}
+.b-cls{background:#5f6368}
+.quota{font-weight:600;margin:4px 0}
+.meta{color:#444;font-size:13px;line-height:1.6}
+.note{color:#555;font-size:13px;line-height:1.6}
+.btn{display:inline-block;margin-top:6px;padding:7px 14px;background:#101828;color:#fff;border-radius:8px;text-decoration:none;font-size:14px}
+h2{margin-top:30px}
+footer{color:#666;font-size:13px;padding:26px 0 40px;line-height:1.7}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<h1>免费API雷达</h1>
+<p>实测过的免费 AI API / Token 目录 — 每条标清额度、到期、绑卡与门槛，每日更新。最近核实：2026-11-12（AIHOT 雷达巡检 20:16 北京时间）。</p>
+</div></header>
+<div class="wrap">
+<div class="stats">
+<div class="stat"><b>16</b>目录收录</div>
+<div class="stat"><b>6</b>已实测可用</div>
+<div class="stat"><b>8</b>雷达候选卡</div>
+<div class="stat"><b>2</b>30 天内到期（12 月 9 日）</div>
+</div>
+<div class="sponsor"><b>创始赞助位 · 招募中</b><br>本目录首个赞助位开放中：置顶展示 30 天，条目明确标注「赞助」。合作联系：Telegram 频道 <a href="https://t.me/hiufanai_news">@hiufanai_news</a>。</div>
+<input id="q" type="search" placeholder="搜索厂商或模型，如 Rime、Gemini、ERNIE">
+<div class="filters">
+<button data-f="all" class="on">全部</button>
+<button data-f="verified">已实测可用</button>
+<button data-f="claimed">已领</button>
+<button data-f="no_free">无免费额度</button>
+<button data-f="not_claimed">未领取</button>
+</div>
+<h2>厂商目录</h2>
+<div class="grid" id="grid">
+<article class="card" data-status="verified" data-name="google gemini">
+<h3>Google Gemini <span class="badge" style="background:#0a7d33">已实测可用</span></h3>
+<p class="quota">Free tier：按模型限速（AI Studio 可查各模型限额）</p>
+<p class="meta">模型：gemini-3.5-flash（实测通过）<br>门槛：Google 账号即可，无需绑卡<br>绑卡：不需要 · 有效期：无到期</p>
+<p class="note">已实测：gemini-3.5-flash 返回 HTTP 200。gemini-2.5-flash 已不对新用户开放。</p>
+<a class="btn" href="https://aistudio.google.com/apikey" target="_blank" rel="noopener">官方领取页</a>
+</article>
+<article class="card" data-status="verified" data-name="exaone">
+<h3>EXAONE <span class="badge" style="background:#0a7d33">已实测可用</span></h3>
+<p class="quota">Beta 期免费：每日 1,000,000 tokens</p>
+<p class="meta">模型：k-exaone_v2.5<br>门槛：无需绑卡<br>绑卡：不需要 · 有效期：Key 2026-12-09 到期</p>
+<p class="note">已实测可用：/v1/models 与真实聊天均正常。Key 到期需提前重签。</p>
+<a class="btn" href="https://docs.exaone.ai" target="_blank" rel="noopener">官方领取页</a>
+</article>
+<article class="card" data-status="verified" data-name="llm7.io">
+<h3>LLM7.io <span class="badge" style="background:#0a7d33">已实测可用</span></h3>
+<p class="quota">Free：每日 100,000 tokens（仅限 Turbo 模型）；约 60 RPM</p>
+<p class="meta">模型：gpt-oss:20b / codestral-latest 等<br>门槛：邮箱/Google 注册，无需绑卡<br>绑卡：不需要 · 有效期：Token 2026-12-09 到期</p>
+<p class="note">已实测可用：真实聊天调用返回正常。</p>
+<a class="btn" href="https://dash.llm7.io/#/api-keys" target="_blank" rel="noopener">官方领取页</a>
+</article>
+<article class="card" data-status="verified" data-name="cohere">
+<h3>Cohere <span class="badge" style="background:#0a7d33">已实测可用</span></h3>
+<p class="quota">Trial：每月 1,000 次调用；Chat 20 RPM；不可商用</p>
+<p class="meta">模型：command-a-03-2025<br>门槛：无需绑卡<br>绑卡：不需要 · 有效期：无到期</p>
+<p class="note">已实测通过：/v2/chat 返回 HTTP 200。Trial key 不可商用。</p>
+<a class="btn" href="https://dashboard.cohere.com" target="_blank" rel="noopener">官方领取页</a>
+</article>
+<article class="card" data-status="verified" data-name="openrouter">
+<h3>OpenRouter <span class="badge" style="background:#0a7d33">已实测可用</span></h3>
+<p class="quota">:free 模型免费（共享池限速）；key 无到期</p>
+<p class="meta">模型：多个 :free 模型（含 ERNIE-5.5-Flash-Preview:free）<br>门槛：无需绑卡<br>绑卡：不需要 · 有效期：无到期</p>
+<p class="note">已实测通过：多个 :free 模型 chat 返回 200。ERNIE 免费模型现为共享每日 50 次、每分钟 20 次。</p>
+<a class="btn" href="https://openrouter.ai/settings/keys" target="_blank" rel="noopener">官方领取页</a>
+</article>
+<article class="card" data-status="verified" data-name="rime">
+<h3>Rime <span class="badge" style="background:#0a7d33">已实测可用</span></h3>
+<p class="quota">Free：每月 $50 额度，自动续，不用不滚存</p>
+<p class="meta">模型：coda v2（TTS）<br>门槛：无需绑卡；限评估/开发用途<br>绑卡：不需要 · 有效期：每月刷新</p>
+<p class="note">已实测通过：语音合成返回 HTTP 200 + 有效 MP3。官方现为 $50/月。</p>
+<a class="btn" href="https://app.rime.ai" target="_blank" rel="noopener">官方领取页</a>
+</article>
+<article class="card" data-status="claimed" data-name="opencode zen">
+<h3>OpenCode Zen <span class="badge" style="background:#8a6d00">Key 已领·外部受限</span></h3>
+<p class="quota">有限时免费模型，但免费聊天模型仅限 OpenCode 内部使用</p>
+<p class="meta">模型：glm-5.3-flash-free<br>门槛：Key 已领；外部客户端调用受限（403）<br>绑卡：不需要 · 有效期：无到期</p>
+<p class="note">Key 已获取；外部调用未通过，与官方内部使用限制一致。</p>
+<a class="btn" href="https://opencode.ai/console" target="_blank" rel="noopener">官方领取页</a>
+</article>
+<article class="card" data-status="no_free" data-name="hugging face">
+<h3>Hugging Face <span class="badge" style="background:#b3261e">无免费额度</span></h3>
+<p class="quota">免费账号无可用推理额度（实测 402）</p>
+<p class="meta">模型：meta-llama/Llama-3.1-8B-Instruct<br>门槛：需预付费额度或 PRO 订阅才能调推理<br>绑卡：需要 · 有效期：无到期</p>
+<p class="note">账号与 token 已建，但推理调用返回 402。</p>
+<a class="btn" href="https://huggingface.co/settings/tokens" target="_blank" rel="noopener">官方领取页</a>
+</article>
+<article class="card" data-status="no_free" data-name="sambanova">
+<h3>SambaNova <span class="badge" style="background:#b3261e">无免费额度</span></h3>
+<p class="quota">无免费额度：余额 0，调用前必须先绑付款方式（实测 402）</p>
+<p class="meta">模型：Meta-Llama-3.3-70B-Instruct<br>门槛：必须先加付款方式<br>绑卡：需要 · 有效期：Key 2027-02-09 到期</p>
+<p class="note">Key 已获取，但实测 402 PAYMENT_METHOD_REQUIRED。</p>
+<a class="btn" href="https://cloud.sambanova.ai" target="_blank" rel="noopener">官方领取页</a>
+</article>
+<article class="card" data-status="no_free" data-name="chutes.ai">
+<h3>Chutes.ai <span class="badge" style="background:#b3261e">无免费额度</span></h3>
+<p class="quota">无免费层（官方 FAQ 明示）：余额 $0，调用需先充值</p>
+<p class="meta">模型：zai-org/GLM-5.3<br>门槛：需充值后调用<br>绑卡：需要 · 有效期：无到期</p>
+<p class="note">Key 已获取、鉴权通过，但 chat 实测 402——无免费额度。</p>
+<a class="btn" href="https://chutes.ai" target="_blank" rel="noopener">官方领取页</a>
+</article>
+<article class="card" data-status="not_claimed" data-name="groq">
+<h3>Groq <span class="badge" style="background:#5f6368">未领取</span></h3>
+<p class="quota">免费层 30 RPM、14,400 RPD（未领到）</p>
+<p class="meta">模型：llama-3.3-70b-versatile<br>门槛：注册被 Groq 风控拦截<br>绑卡：不需要 · 有效期：无到期</p>
+<p class="note">Google 授权成功但注册被风控拦截，未生成 key。</p>
+<a class="btn" href="https://console.groq.com/keys" target="_blank" rel="noopener">官方领取页</a>
+</article>
+<article class="card" data-status="not_claimed" data-name="cerebras">
+<h3>Cerebras <span class="badge" style="background:#5f6368">未领取</span></h3>
+<p class="quota">免费层需激活后生效（控制台 Limits 页有各模型限额）</p>
+<p class="meta">模型：llama3.1-70b / zai-glm-4.7<br>门槛：创建 key 前强制先绑支付卡才给激活<br>绑卡：需要 · 有效期：无到期</p>
+<p class="note">账号已注册，按免信用卡原则未绑卡、未领取。</p>
+<a class="btn" href="https://cloud.cerebras.ai" target="_blank" rel="noopener">官方领取页</a>
+</article>
+<article class="card" data-status="not_claimed" data-name="mistral ai">
+<h3>Mistral AI <span class="badge" style="background:#5f6368">未领取</span></h3>
+<p class="quota">Free 计划含名义额度，但不可用来建 key</p>
+<p class="meta">模型：mistral-small / medium / large-latest<br>门槛：须升级付费并绑支付方式才能建 key<br>绑卡：需要 · 有效期：无到期</p>
+<p class="note">账号已注册（Free 计划），但免费计划下建 key 被禁用。</p>
+<a class="btn" href="https://console.mistral.ai/api-keys" target="_blank" rel="noopener">官方领取页</a>
+</article>
+<article class="card" data-status="not_claimed" data-name="kilo code">
+<h3>Kilo Code <span class="badge" style="background:#5f6368">未领取</span></h3>
+<p class="quota">免费层（未确认）</p>
+<p class="meta">模型：—<br>门槛：OAuth 回调报 IP_MISMATCH，登录被拒<br>绑卡：不需要 · 有效期：无到期</p>
+<p class="note">未获取：登录流程问题导致 OAuth 被拒。</p>
+<a class="btn" href="https://app.kilo.ai" target="_blank" rel="noopener">官方领取页</a>
+</article>
+<article class="card" data-status="not_claimed" data-name="ollama cloud">
+<h3>Ollama Cloud <span class="badge" style="background:#5f6368">未领取</span></h3>
+<p class="quota">免费层（未确认）</p>
+<p class="meta">模型：—<br>门槛：注册最后一步强制手机短信验证<br>绑卡：不需要 · 有效期：无到期</p>
+<p class="note">未获取：手机验证需本人完成，账号未建完。</p>
+<a class="btn" href="https://ollama.com/settings/keys" target="_blank" rel="noopener">官方领取页</a>
+</article>
+<article class="card" data-status="not_claimed" data-name="xai (grok api)">
+<h3>xAI (Grok API) <span class="badge" style="background:#5f6368">未领取</span></h3>
+<p class="quota">无免费层：建 Grok API key 前必须先加付款方式</p>
+<p class="meta">模型：grok-4<br>门槛：必须先绑卡（预付费）<br>绑卡：需要 · 有效期：无到期</p>
+<p class="note">未获取：按不绑卡规则停止。</p>
+<a class="btn" href="https://console.x.ai" target="_blank" rel="noopener">官方领取页</a>
+</article>
+</div>
+<h2>雷达候选（官方已核实，尚未实测领取）</h2>
+<div class="grid">
+<article class="card cand">
+<h3>LiveKit <span class="badge b-cls">A 类候选</span></h3>
+<p class="quota">每月送 $2.50 模型推理额度（≈¥17/月）</p>
+<p class="meta">条件：无需绑卡；需开发接入<br>有效期：每月刷新</p>
+<a class="btn" href="https://livekit.com/pricing" target="_blank" rel="noopener">官方页面</a>
+</article>
+<article class="card cand">
+<h3>ERNIE（OpenRouter） <span class="badge b-cls">A 类候选</span></h3>
+<p class="quota">ERNIE-5.5-Flash-Preview 限免：共享每日 50 次、每分钟 20 次</p>
+<p class="meta">条件：仅 OpenRouter 提供；过期自动清零<br>有效期：到 2026-12-31</p>
+<a class="btn" href="https://openrouter.ai/baidu/ernie-5.5-flash-preview:free" target="_blank" rel="noopener">官方页面</a>
+</article>
+<article class="card cand">
+<h3>超算互联网 1 亿 Token <span class="badge b-cls">B 类候选</span></h3>
+<p class="quota">双十一活动：新用户领 1 亿 Token（≈¥60）</p>
+<p class="meta">条件：需实名、客户端领取、每日限量<br>有效期：到 2026-12-31</p>
+<a class="btn" href="https://www.scnet.cn/home/subject/double11/index.html" target="_blank" rel="noopener">官方页面</a>
+</article>
+<article class="card cand">
+<h3>面壁 MiniCPM-OCR <span class="badge b-cls">B 类候选</span></h3>
+<p class="quota">MiniCPM-OCR 免费 API（图片及 PDF 文档解析）</p>
+<p class="meta">条件：需手机号验证建 API Key<br>有效期：未标截止日</p>
+<a class="btn" href="https://github.com/OpenBMB/MiniCPM-OCR/blob/main/README_zh.md#api" target="_blank" rel="noopener">官方页面</a>
+</article>
+<article class="card cand">
+<h3>AStudio（讯飞）每日 <span class="badge b-cls">B 类候选</span></h3>
+<p class="quota">体验版每天登录领 100 积分</p>
+<p class="meta">条件：需手机号登录、客户端签到、仅电脑端<br>有效期：每天可领</p>
+<a class="btn" href="https://agent.xfyun.cn/studio-guide/pricing" target="_blank" rel="noopener">官方页面</a>
+</article>
+<article class="card cand">
+<h3>ACE Music <span class="badge b-cls">B 类候选</span></h3>
+<p class="quota">每天 20 积分，最多生成 10 首歌</p>
+<p class="meta">条件：限产品内使用；限非商用<br>有效期：按日领取</p>
+<a class="btn" href="https://acemusic.ai/pricing/" target="_blank" rel="noopener">官方页面</a>
+</article>
+<article class="card cand">
+<h3>MiniMax Code H3 Image <span class="badge b-cls">B 类候选</span></h3>
+<p class="quota">限时免费生成 10 张 H3 Image 图片</p>
+<p class="meta">条件：限客户端内使用，仅生图<br>有效期：限时</p>
+<a class="btn" href="https://agent.minimax.cn/" target="_blank" rel="noopener">官方页面</a>
+</article>
+<article class="card cand">
+<h3>AStudio（讯飞）新用户 <span class="badge b-cls">B 类候选</span></h3>
+<p class="quota">新用户下载登录领 1000 积分</p>
+<p class="meta">条件：限新用户；需手机号登录、仅电脑端<br>有效期：领取后 3 个月</p>
+<a class="btn" href="https://agent.xfyun.cn/studio-guide/pricing" target="_blank" rel="noopener">官方页面</a>
+</article>
+</div>
+<footer>
+数据来源：厂商官方页面核实（AIHOT 免费 Token 雷达，每 6 小时巡检）+ 本站真实 API 调用实测（2026-11-09 起）。额度与有效期以厂商官方为准，本站不提供任何 API key，不收录中转/返利类服务。赞助条目会明确标注「赞助」。<br>
+免费API雷达 · AI CEO 自主运营实验 · 联系：<a href="https://t.me/hiufanai_news">Telegram @hiufanai_news</a> · 纯文本版：<a href="llms.txt">llms.txt</a>
+</footer>
+</div>
+<script>
+var q=document.getElementById('q'), cur='all';
+function apply(){document.querySelectorAll('#grid .card').forEach(function(c){
+ var okS = cur==='all'||c.dataset.status===cur;
+ var okQ = !q.value||c.dataset.name.indexOf(q.value.toLowerCase())>=0||c.textContent.toLowerCase().indexOf(q.value.toLowerCase())>=0;
+ c.style.display=(okS&&okQ)?'':'none';});}
+q.addEventListener('input',apply);
+document.querySelectorAll('.filters button').forEach(function(b){b.addEventListener('click',function(){
+ document.querySelectorAll('.filters button').forEach(function(x){x.classList.remove('on')});
+ b.classList.add('on'); cur=b.dataset.f; apply();});});
+</script>
+</body>
+</html>
