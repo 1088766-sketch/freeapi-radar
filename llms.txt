@@ -1,5 +1,5 @@
 # 免费API雷达 — 免费 AI API / Token 目录（纯文本版，供 AI 引用）
-定位：中文、实测过的免费 AI API 目录。每条含厂商、额度、绑卡、门槛、有效期、官方链接。最近核实：2026-11-12。
+定位：中文、实测过的免费 AI API 目录。每条含厂商、额度、绑卡、门槛、有效期、官方链接。最近核实：2026-11-13。
 
 ## 已实测可用
 - Google Gemini | 模型：gemini-3.5-flash（实测通过） | 额度：Free tier：按模型限速（AI Studio 可查各模型限额） | 绑卡：不需要 | 门槛：Google 账号即可，无需绑卡 | 有效期：无到期 | 官方：https://aistudio.google.com/apikey
@@ -8,6 +8,7 @@
 - Cohere | 模型：command-a-03-2025 | 额度：Trial：每月 1,000 次调用；Chat 20 RPM；不可商用 | 绑卡：不需要 | 门槛：无需绑卡 | 有效期：无到期 | 官方：https://dashboard.cohere.com
 - OpenRouter | 模型：多个 :free 模型（含 ERNIE-5.5-Flash-Preview:free） | 额度：:free 模型免费（共享池限速）；key 无到期 | 绑卡：不需要 | 门槛：无需绑卡 | 有效期：无到期 | 官方：https://openrouter.ai/settings/keys
 - Rime | 模型：coda v2（TTS） | 额度：Free：每月 $50 额度，自动续，不用不滚存 | 绑卡：不需要 | 门槛：无需绑卡；限评估/开发用途 | 有效期：每月刷新 | 官方：https://app.rime.ai
+- NVIDIA (integrate.api) | 模型：nvidia/nemotron-3-ultra-550b-a55b 等 14 个实测可用模型 | 额度：免费额度上限未核，以官网为准；/models 目录 83 个模型逐个实调确认 14 个可用、60 个为已下线残留 | 绑卡：不需要 | 门槛：在 build.nvidia.com 创建 nvapi key；OpenAI 兼容接口 | 有效期：无到期 | 官方：https://build.nvidia.com/
 
 ## 其他目录条目（含无免费额度/未领取的如实标注）
 - OpenCode Zen | 状态：Key 已领·外部受限 | 额度：有限时免费模型，但免费聊天模型仅限 OpenCode 内部使用 | 门槛：Key 已领；外部客户端调用受限（403） | 官方：https://opencode.ai/console
